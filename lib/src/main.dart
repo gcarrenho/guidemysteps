@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:guidemysteps/screens/init/init_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:guidemysteps/guide/core/bloc/bloc.dart';
+import 'package:guidemysteps/guide/core/screens/albums_screen.dart';
+import 'package:guidemysteps/guide/repository/services.dart';
+import 'package:guidemysteps/screens/init/initScreen.dart';
+import 'package:guidemysteps/screens/init/init_background_screen.dart';
+
+import 'guide/core/model/albums_list.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+  //const MyApp({Key? key}) : super(key: key);
+  late List<Album> albums;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -25,7 +32,17 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const InitScreen(),
+      home: BlocProvider(
+        create: (context) =>
+            AlbumsBloc(albumsRepo: AlbumServices(), albums: albums),
+        child: AlbumsScreen(),
+      ),
+      /*Scaffold(
+        appBar: AppBar(
+          title: Text('AGS-R4'),
+        ),
+        body: const InitScreen()
+        ),*/
     );
   }
 }

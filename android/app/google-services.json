@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "709484762220",
+    "project_id": "gcarreno-project-test",
+    "storage_bucket": "gcarreno-project-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709484762220:android:25687d1eec0e0db9e0b449",
+        "android_client_info": {
+          "package_name": "com.example.guidemysteps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709484762220-mp4djmme7qlgt612lc3atr3okidkge4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZTEfjZMbiDinwDW0DI2BaENbZW_UePY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709484762220-mp4djmme7qlgt612lc3atr3okidkge4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
